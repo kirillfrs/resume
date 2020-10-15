@@ -599,7 +599,7 @@ table {
   width: 128px;
   height: 128px;
   position: absolute;
-  background: url("/img/javascript-4.svg") no-repeat;
+  background: url("../img/javascript-4.svg") no-repeat;
   background-size: contain;
   right: 20px;
   top: 105px;
@@ -656,7 +656,7 @@ table {
   width: 128px;
   height: 128px;
   position: absolute;
-  background: url("/img/css-w3c.png") no-repeat;
+  background: url("../img/css-w3c.png") no-repeat;
   background-size: contain;
   z-index: -1;
   -webkit-transform: rotate(37deg);
@@ -671,7 +671,7 @@ table {
   width: 128px;
   height: 128px;
   position: absolute;
-  background: url("/img/HTML5_Logo_128.png") no-repeat;
+  background: url("../img/HTML5_Logo_128.png") no-repeat;
   left: 39px;
   top: 62px;
   z-index: -1;
