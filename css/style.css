@@ -699,7 +699,6 @@ table {
 
 .portfolio {
   text-align: center;
-  margin-bottom: 50px;
   padding-bottom: 80px;
   padding-top: 100px;
 }
@@ -1227,6 +1226,92 @@ textarea.form__input {
   background-color: #5e9644;
 }
 
+.table-price {
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.table-price__header {
+  text-align: center;
+  font-size: 55px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.table-price__value {
+  text-align: left;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 10px 15px;
+}
+
+.table-price__list-head {
+  margin-bottom: 20px;
+}
+
+.table-price__list {
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-price__item {
+  width: 50%;
+  padding: 10px 15px;
+  border: 2px solid #000;
+}
+
+.table-price__item--price {
+  width: 20%;
+  text-align: left;
+}
+
+.table-price__item--time {
+  text-align: left;
+  width: 20%;
+}
+
+.table-price__item--time-last {
+  text-align: center;
+}
+
+.table-price__slider {
+  overflow: hidden;
+}
+
+.table-price__toggles {
+  display: none;
+}
+
+.slider__toggle {
+  display: inline-block;
+  background-color: #b5b9be;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px;
+  margin-right: 16px;
+}
+
+.slider__toggle-active {
+  border: 3px #283645 solid;
+  background-color: transparent;
+}
+
+.slider__toggle:hover {
+  background-color: #7e868f;
+}
+
+.slider__toggle:active {
+  background-color: #e9ebec;
+}
+
+.table-price__toggles {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .container {
     max-width: 768px;
@@ -1435,5 +1520,42 @@ textarea.form__input {
   .form__close-btn {
     right: 0;
     top: 5px;
+  }
+
+  .table-price__toggles {
+    display: block;
+  }
+
+  .table-price {
+    padding: 20px 20px;
+  }
+
+  .table-price__header {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .table-price__value--header {
+    font-size: 24px;
+    white-space: nowrap;
+    font-weight: 700;
+  }
+
+  .table-price__item {
+    width: 0;
+    padding: 5px 10px;
+    border: 2px solid #000;
+  }
+
+  .table-price__item--price {
+    white-space: nowrap;
+  }
+
+  .table-price__item--time {
+    white-space: nowrap;
+  }
+
+  .table-price__item--time-last {
+    text-align: center;
   }
 }
