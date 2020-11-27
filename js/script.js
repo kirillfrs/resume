@@ -226,7 +226,7 @@
 
     function addActiveClass(evt, btn) {
         const target = evt.target;
-        if (target.classList.contains('slider__toggle-active')) {
+        if (target && target.classList.contains('slider__toggle-active')) {
             btn.classList.remove('slider__toggle-active');
         } else {
             target.classList.add('slider__toggle-active');
