@@ -207,9 +207,7 @@
     const slider = document.querySelector('.table-price__list');
     const hammertime = new Hammer(slider);
 
-    function deleteNotDigits(string) {
-        return +string.replace(/\D/g, '');
-    }
+  
 
 
     function moveSlide(move, touch = 'click') {
@@ -228,7 +226,7 @@
 
     function addActiveClass(evt, btn) {
         const target = evt.target;
-        if (target && target.classList.contains('slider__toggle-active')) {
+        if (target.classList.contains('slider__toggle-active')) {
             btn.classList.remove('slider__toggle-active');
         } else {
             target.classList.add('slider__toggle-active');
