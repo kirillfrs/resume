@@ -1227,7 +1227,7 @@ textarea.form__input {
 }
 
 .table-price {
-  padding-top: 20px;
+  padding-top: 100px;
   padding-bottom: 80px;
 }
 
@@ -1235,7 +1235,7 @@ textarea.form__input {
   text-align: center;
   font-size: 55px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .table-price__value {
@@ -1306,6 +1306,79 @@ textarea.form__input {
 
 .table-price__toggles {
   text-align: center;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
+
+.pageup {
+  opacity: 0;
+  width: 26px;
+  height: 26px;
+  position: fixed;
+  bottom: 100px;
+  right: 5%;
+  z-index: 30;
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid white;
+  -webkit-transition: 1s all;
+  -o-transition: 1s all;
+  transition: 1s all;
 }
 
 @media (max-width: 768px) {

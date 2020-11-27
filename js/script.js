@@ -15,7 +15,7 @@
             firstStory.classList.remove('hidden');
             secondStory.classList.add('hidden');
         }
-    })
+    });
 
 })();
 
@@ -143,7 +143,7 @@
     var onMouseClick = function (evt) {
         evt.preventDefault();
         modalWindow.classList.add('modal-show');
-    }
+    };
 
     var onBtnClose = function (evt) {
         evt.preventDefault();
@@ -206,8 +206,8 @@
     const btnNext = document.querySelector('.slider__toggle.next-arrow');
     const slider = document.querySelector('.table-price__list');
     const hammertime = new Hammer(slider);
+    const mobileWidth = 578;
 
-  
 
 
     function moveSlide(move, touch = 'click') {
@@ -255,11 +255,72 @@
         addActiveClass(evt, btnBack);
         moveSlide(-40);
     });
-
-    hammertime.on('swiperight swipeleft', function (evt) {
-        addActiveTouch(evt);
-        moveSlide(-40, evt);
-    });
-
+    if (mobileWidth > document.documentElement.clientWidth) {
+        hammertime.on('swiperight swipeleft', function (evt) {
+            addActiveTouch(evt);
+            moveSlide(-40, evt);
+        });
+    }
 })();;
+"use strict";
+(function () {
+    const scrolling = (upSelector) => {
+        const upElem = document.querySelector(upSelector);
+
+        window.addEventListener('scroll', () => {
+            if (document.documentElement.scrollTop > 100) {
+                upElem.classList.add('animated', 'fadeIn');
+                upElem.classList.remove('fadeOut');
+
+            } else {
+                upElem.classList.add('fadeOut');
+                upElem.classList.remove('fadeIn');
+
+            }
+        });
+
+        // scrolling with request Animation <frame/>
+
+        let links = document.querySelectorAll('[href^="#'),
+            speed = 0.35;
+
+        links.forEach(link => {
+            link.addEventListener('click', function (evt) {
+                evt.preventDefault();
+                let widthTop = document.documentElement.scrollTop,
+                    hash = this.hash,
+                    toBlock = document.querySelector(hash).getBoundingClientRect().top,
+                    start = null;
+
+                requestAnimationFrame(step);
+
+                function step(time) {
+                    if (start === null) {
+                        start = time;
+                    }
+
+                    let progress = time - start,
+                        r = (toBlock < 0 ? Math.max(widthTop - progress / speed, widthTop + toBlock)
+                            : Math.min(widthTop + progress / speed, widthTop + toBlock));
+
+                    document.documentElement.scrollTo(0, r);
+
+                    if (r != widthTop + toBlock) {
+                        requestAnimationFrame(step);
+                    } else {
+                        location.hash = hash;
+                    }
+                }
+            });
+        });
+
+
+
+    };
+
+    scrolling('.pageup');
+    // скролл страницы
+})();
+;
+
 
